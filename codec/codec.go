@@ -5,7 +5,7 @@ import "io"
 // Header 请求头，存储额外信息
 type Header struct {
 	ServiceMethod string // 服务名和方法名
-	Seq           uint64 // 请求的id
+	Seq           uint64 // client请求的id
 	Error         string
 }
 

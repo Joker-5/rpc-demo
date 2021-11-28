@@ -24,7 +24,7 @@ type Option struct {
 
 var DefaultOption = &Option{
 	MagicNumber: MagicNumber,
-	CodecType:   codec.JsonType, // 默认Option采用JSON编解码器
+	CodecType:   codec.JsonType, // 默认采用JSON编解码器来处理消息
 }
 
 type Server struct {
