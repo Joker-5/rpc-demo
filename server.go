@@ -7,8 +7,9 @@ import (
 	"log"
 	"net"
 	"reflect"
-	"rpc_demo/codec"
 	"sync"
+
+	"rpc_demo/codec"
 )
 
 const MagicNumber = 0xffff7777
@@ -23,7 +24,7 @@ type Option struct {
 
 var DefaultOption = &Option{
 	MagicNumber: MagicNumber,
-	CodecType:   codec.JsonType,
+	CodecType:   codec.JsonType, // 默认Option采用JSON编解码器
 }
 
 type Server struct {
