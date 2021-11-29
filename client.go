@@ -191,8 +191,8 @@ func Dial(network, address string, opts ...*Option) (client *Client, err error) 
 
 // 发送请求至server
 func (client *Client) send(call *Call) {
-	client.mu.Lock()
-	defer client.mu.Unlock()
+	client.sending.Lock()
+	defer client.sending.Unlock()
 
 	seq, err := client.registerCall(call)
 	if err != nil {
